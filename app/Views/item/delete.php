@@ -5,7 +5,6 @@
     <div class='row'>
         <h1>Delete Item </h1>
         <form action="<?= base_url('item/delete/' . $item->id) ?>" method="POST">
-            <input type="hidden" name="_method" value="DELETE">           
             <input type="hidden" name="id" value="<?= $item->id ?>"> <!-- need to access id -->
             <a href="<?=base_url()?>item/index" style="width: 60px;" type="button" class="btn btn-outline-primary">Back</a>
             <div class="form-group row">
