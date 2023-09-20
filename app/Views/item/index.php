@@ -1,34 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Item</title>
+<?= $this->extend('item/layout/main') ?>
 
-    <!-- Link to Bootstrap CSS via CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-</head>
-<body>
-    <h1>List of Items </h1>
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Price</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach($items as $item): ?>
+<?= $this->section('content') ?>
+<div class='container'>
+    <div class='row'>
+        <h1>List of Items </h1>
+        <a href="<?=base_url()?>item/add" style="width: 60px;" type="button" class="btn btn-outline-primary">Add</a>
+        <table class="table table-striped">
+            <thead>
                 <tr>
-                    <td><?= $item->id ?></td>
-                    <td><?= $item->name ?></td>
-                    <td><?= $item->description ?></td>
-                    <td><?= $item->price ?></td>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Action</th>
                 </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-</body>
-</html>
+            </thead>
+            <tbody>
+                <?php foreach($items as $item): ?>
+                    <tr>
+                        <td><?= $item->id ?></td>
+                        <td><?= $item->name ?></td>
+                        <td><?= $item->price ?></td>
+                        <td>
+                        <a class="btn btn-primary" href="<?= base_url() ?>item/view/<?=$item->id?>" role="button">View</a>
+                        <a class="btn btn-warning" href="<?= base_url() ?>item/edit/<?=$item->id?>" role="button">Edit</a>
+                        <a class="btn btn-danger" href="<?= base_url() ?>item/delete/<?=$item->id?>" role="button">Delete</a>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+</div>
+<?= $this->endSection('content') ?>
