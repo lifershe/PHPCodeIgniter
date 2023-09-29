@@ -1,0 +1,49 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-image: linear-gradient(120deg, greenyellow 0%, #96e6a1 70%);
+}
+
+.neonText {
+    animation: flicker 1.5s infinite alternate;
+    color: greenyellow;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    background-image: linear-gradient(180deg, #d4fc79 0%, #96e6a1 70%); */
+}
+
+h1 {
+    font-size: 3.2rem;
+    /* margin-top: 50px;    */
+}
+
+/* Flickering animation */
+@keyframes flicker {
+
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+        text-shadow:
+            0 0 4px #fff,
+            0 0 11px #fff,
+            0 0 19px #fff,
+            0 0 40px #0fa,
+            0 0 80px #0fa,
+            0 0 90px #0fa,
+            0 0 100px #0fa,
+            0 0 150px greenyellow;
+    }
+
+    20%,
+    24%,
+    55% {
+        text-shadow: none;
+    }
+}

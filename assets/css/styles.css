@@ -1,0 +1,51 @@
+  /* Define a CSS class for the image */
+  .hover-image {
+      width: 300px;
+      padding: 20px;
+      margin-top: 50px;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+
+  /* Apply the hover effect to the image when hovered */
+  .hover-image:hover {
+      transform: scale(1.1);
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .thumbnail-image {
+      width: 50px;
+      padding: 1px;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+
+  tr:hover {
+      transform: scale(1.01);
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  body {
+      background-image: linear-gradient(to right, #96c93d, #96c93f);
+      /* background-color: cyan; */
+  }
+
+  h1,
+  h4 {
+      color: white;
+      font-weight: bolder;
+      text-shadow: 2px 2px black;
+  }
+
+  .container {
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      margin-top: 20px;
+  }
+
+  .chart-container{
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    margin: 50px;
+  }
+
+  td{
+    font-weight: bolder;
+    font-size: large;
+  }
